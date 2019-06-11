@@ -181,3 +181,14 @@ a:hover {
   color: black;
 
 }
+
+.main {
+  position: relative;
+}
+
+.tm {
+  position: absolute;
+  bottom: 0;
+  right: 1%;
+  opacity: 50%
+}
