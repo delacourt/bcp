@@ -219,6 +219,16 @@
   const show_b = document.querySelectorAll('.show_s');
   const contact_b = document.querySelectorAll('.contact_s');
 
+  if (navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)) {
+    main.setAttribute("src", "images/mobile1.jpg");
+  }
+
   main_b.forEach((b) => {
     b.addEventListener('click', () => {
       pages.forEach((p) => {
