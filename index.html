@@ -39,7 +39,7 @@
       <div id="page_wrapper">
 
   <div class="page" id="main">
-    <img class="pdf" src="images/home.jpg" alt="">
+    <img class="pdf" src="images/home.jpg" alt="" id="main_img">
     <div class="sidebar">
       <div class="bio_s">BIOGRAFIA</div>
       <br>
@@ -70,8 +70,9 @@
     </div> -->
   </div>
 
+  <!-- CONTACT -->
   <div class="page hidden" style="position: relative;" id="contact">
-    <img class="pdf" src="images/contact.jpg" alt="">
+    <img class="pdf" src="images/contact.jpg" alt="" id="contact_img">
     <a href="https://www.facebook.com/benjamincanoplanes/" target="blank"><i style="position: absolute; bottom: 0; right: 10%; font-size: 3.9vw" class="fab fa-facebook-square"></i></a>
     <a href="https://www.instagram.com/benjamincanoplanes/" target="blank">
     <i style="position: absolute; bottom: 0; right: 15%; font-size: 3.9vw" class="fab fa-instagram"></i></a>
@@ -219,15 +220,14 @@
   const show_b = document.querySelectorAll('.show_s');
   const contact_b = document.querySelectorAll('.contact_s');
 
-  if (navigator.userAgent.match(/Android/i)
-    || navigator.userAgent.match(/webOS/i)
-    || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
-    || navigator.userAgent.match(/iPod/i)
-    || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)) {
-    main.setAttribute("src", "images/mobile1.jpg");
+  // MOBILE DISPLAY //
+
+
+  if (window.screen.width < 1024 && window.screen.height < 768) {
+    document.getElementById('main_img').setAttribute('src', 'images/mobile1.jpg');
+    document.getElementById('contact_img').setAttribute('src', 'images/mobile_contact.jpg');
   }
+
 
 
   main_b.forEach((b) => {
