@@ -57,7 +57,8 @@
 
 
   <div class="page hidden" id="bio">
-    <img class="pdf" src="images/bio-1.jpg" alt="">
+    <img class="pdf" id="bio_1" src="images/bio-1.jpg" alt="">
+    <img class="pdf hidden" id="bio_2" src="images/mobile_bio_2.jpg" alt="">
 
     <!-- <div class="sidebar-press">
       <div class="bio_s">BIOGRAFIA</div>
@@ -238,6 +239,12 @@
     ) {
       document.getElementById('main_img').setAttribute('src', 'images/mobile1.jpg');
       document.getElementById('contact_img').setAttribute('src', 'images/mobile_contact.jpg');
+      document.getElementById('bio_1').setAttribute('src', 'images/mobile_bio_1.jpg');
+      document.getElementById('bio_2').classList.remove('hidden');
+      document.querySelector(".sidebar").setAttribute('style', 'width: auto; font-size: 2.1vw;');
+      document.getElementById('box').setAttribute('style', 'width: auto; font-size: 2.1vw;');
+
+
     }
   console.log(navigator.userAgent);
 
